@@ -1,0 +1,205 @@
+{
+  "steps": [],
+  "tags": [],
+  "explorationSampling": {
+    "selection": {
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "partitionSelectionMethod": "ALL",
+      "maxRecords": 30000,
+      "targetRatio": 0.02
+    },
+    "autoRefreshSample": false,
+    "_refreshTrigger": 0
+  },
+  "vizSampling": {
+    "autoRefreshSample": false,
+    "_refreshTrigger": 0
+  },
+  "exploreUIParams": {},
+  "explorationFilters": [],
+  "expectedInputSchema": {
+    "userModified": false,
+    "columns": [
+      {
+        "name": "customer_id",
+        "type": "string",
+        "maxLength": 1000
+      },
+      {
+        "name": "ip_region_code",
+        "type": "string",
+        "maxLength": 1000
+      },
+      {
+        "name": "ip_region",
+        "type": "string",
+        "maxLength": 1000
+      },
+      {
+        "name": "ip_region_hierarchy",
+        "type": "string",
+        "maxLength": 1000
+      },
+      {
+        "name": "ip_city",
+        "type": "string",
+        "maxLength": 1000
+      },
+      {
+        "name": "ip_postal_code",
+        "type": "string",
+        "maxLength": 1000
+      },
+      {
+        "name": "ip_latitude",
+        "type": "double",
+        "maxLength": 1000
+      },
+      {
+        "name": "ip_longitude",
+        "type": "double",
+        "maxLength": 1000
+      },
+      {
+        "name": "ip_timezone",
+        "type": "string",
+        "maxLength": 1000
+      },
+      {
+        "name": "ip_continent",
+        "type": "string",
+        "maxLength": 1000
+      },
+      {
+        "name": "ip_country",
+        "type": "string",
+        "maxLength": 1000
+      },
+      {
+        "name": "pages_visited",
+        "type": "double",
+        "maxLength": 1000
+      },
+      {
+        "name": "campain",
+        "type": "boolean",
+        "maxLength": 1000
+      },
+      {
+        "name": "predicted_revenue",
+        "type": "double",
+        "maxLength": 1000
+      }
+    ]
+  },
+  "charts": [
+    {
+      "data": {
+        "name": "Chart",
+        "genericMeasures": [],
+        "dimensions": [],
+        "type": "scatter_2d",
+        "includeZero": true,
+        "chartOptions": {},
+        "hexbinRadius": 10,
+        "yAxisMode": "NORMAL",
+        "xAxisMode": "NORMAL",
+        "computeMode": "NONE",
+        "filters": [],
+        "colorMeasures": [],
+        "sizeMeasures": [],
+        "measures": [],
+        "hexbin": false
+      },
+      "$$hashKey": "13Y",
+      "chartOptions": {
+        "zeroEnabled": false,
+        "enabledYAxisModes": [
+          {
+            "value": "NORMAL",
+            "label": "Normal",
+            "shortLabel": "Normal"
+          }
+        ],
+        "enabledXAxisModes": [
+          {
+            "value": "NORMAL",
+            "label": "Normal",
+            "shortLabel": "Normal"
+          }
+        ],
+        "enabledComputeModes": [
+          {
+            "value": "NONE",
+            "label": "No computation",
+            "shortLabel": "None"
+          }
+        ],
+        "vAxisOptionsDisplayed": false,
+        "hAxisOptionsDisplayed": false,
+        "computeOptionsDisplayed": false
+      },
+      "multiplotDisplayModes": [
+        "column",
+        "line"
+      ],
+      "dateModes": [
+        {
+          "group": "Timeline",
+          "value": "YEAR",
+          "label": "Year"
+        },
+        {
+          "group": "Timeline",
+          "value": "MONTH",
+          "label": "Month"
+        },
+        {
+          "group": "Timeline",
+          "value": "WEEK",
+          "label": "Week"
+        },
+        {
+          "group": "Timeline",
+          "value": "DAY",
+          "label": "Day"
+        },
+        {
+          "group": "Timeline",
+          "value": "HOUR",
+          "label": "Hour"
+        },
+        {
+          "group": "Regroup",
+          "value": "QUARTER_OF_YEAR",
+          "label": "Quarter of Year"
+        },
+        {
+          "group": "Regroup",
+          "value": "MONTH_OF_YEAR",
+          "label": "Month of Year"
+        },
+        {
+          "group": "Regroup",
+          "value": "WEEK_OF_YEAR",
+          "label": "Week of year"
+        },
+        {
+          "group": "Regroup",
+          "value": "DAY_OF_MONTH",
+          "label": "Day of month"
+        },
+        {
+          "group": "Regroup",
+          "value": "DAY_OF_WEEK",
+          "label": "Day of week"
+        },
+        {
+          "group": "Regroup",
+          "value": "HOUR_OF_DAY",
+          "label": "Hour of day"
+        }
+      ]
+    }
+  ]
+}

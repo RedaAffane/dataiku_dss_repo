@@ -1,0 +1,126 @@
+{
+  "type": "Filesystem",
+  "managed": true,
+  "description": "### Contents\n\n- All historical customer\u0027s navigational data on the company web site.\n- The yearly revenue these historical customers have generated.\n\n### Usage\n#### Create a model for revenue prediction\n\nHow much can be learnt in terms of revenue prediction using __only customers navigation data__?\nThis is done in the following [Analysis](/projects/DATAIKU_TSHIRTS/analysis/gPd2KlKo/ml/p/60zKZeke/).",
+  "formatType": "csv",
+  "checklists": {
+    "checklists": []
+  },
+  "checks": [],
+  "customMeta": {
+    "kv": {}
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT"
+  },
+  "readWriteOptions": {
+    "preserveOrder": false,
+    "writeBuckets": 1,
+    "forceSingleOutputFile": false,
+    "defaultReadOrdering": {
+      "enabled": false,
+      "rules": []
+    }
+  },
+  "formatParams": {
+    "style": "unix",
+    "charset": "utf8",
+    "separator": "\t",
+    "quoteChar": "\"",
+    "escapeChar": "\\",
+    "dateSerializationFormat": "ISO",
+    "arrayMapFormat": "json",
+    "hiveSeparators": [
+      "\u0002",
+      "\u0003",
+      "\u0004",
+      "\u0005",
+      "\u0006",
+      "\u0007",
+      "\b"
+    ],
+    "skipRowsBeforeHeader": 0,
+    "parseHeaderRow": false,
+    "skipRowsAfterHeader": 0,
+    "probableNumberOfRecords": 0,
+    "normalizeBooleans": false,
+    "normalizeDoubles": false,
+    "readAdditionalColumnsBehavior": "INSERT_IN_DATA_WARNING",
+    "readMissingColumnsBehavior": "DISCARD_SILENT",
+    "readDataTypeMismatchBehavior": "DISCARD_WARNING",
+    "writeDataTypeMismatchBehavior": "DISCARD_WARNING",
+    "fileReadFailureBehavior": "FAIL",
+    "compress": "gz"
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "versionTag": {
+    "versionNumber": 4,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1461148471392
+  },
+  "tags": [],
+  "params": {
+    "connection": "filesystem_managed",
+    "path": "/DKU_TSHIRTS.web_history_prepared",
+    "notReadyIfEmpty": false,
+    "filesSelectionRules": {
+      "mode": "ALL",
+      "excludeRules": [],
+      "includeRules": [],
+      "explicitFiles": []
+    }
+  },
+  "schema": {
+    "columns": [
+      {
+        "maxLength": -1,
+        "name": "customer_id",
+        "timestampNoTzAsDate": false,
+        "type": "string"
+      },
+      {
+        "maxLength": -1,
+        "name": "ip",
+        "timestampNoTzAsDate": false,
+        "type": "string"
+      },
+      {
+        "maxLength": -1,
+        "name": "pages_visited",
+        "timestampNoTzAsDate": false,
+        "type": "double"
+      },
+      {
+        "maxLength": -1,
+        "name": "campain",
+        "timestampNoTzAsDate": false,
+        "type": "boolean"
+      },
+      {
+        "maxLength": -1,
+        "name": "revenue",
+        "timestampNoTzAsDate": false,
+        "type": "bigint"
+      }
+    ],
+    "userModified": false
+  },
+  "metrics": {
+    "probes": []
+  },
+  "metricsChecks": {
+    "runOnBuild": false,
+    "checks": [],
+    "displayedState": {
+      "checks": []
+    }
+  }
+}

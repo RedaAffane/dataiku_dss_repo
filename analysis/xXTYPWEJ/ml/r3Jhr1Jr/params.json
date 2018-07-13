@@ -1,0 +1,687 @@
+{
+    "targetVariable": "revenue", 
+    "initiator": "admin", 
+    "name": "Predict revenue", 
+    "predictionDisplayScript": {
+        "coloring": {
+            "scheme": "MEANING_AND_STATUS", 
+            "individualColumns": [], 
+            "valueColoringMode": "HASH"
+        }, 
+        "columnsSelection": {
+            "mode": "ALL"
+        }, 
+        "tags": [], 
+        "analysisColumnData": {}, 
+        "charts": [], 
+        "exploreUIParams": {}, 
+        "vizSampling": {
+            "autoRefreshSample": false, 
+            "_refreshTrigger": 0
+        }, 
+        "steps": [], 
+        "globalSearchQuery": "", 
+        "previewMode": "ALL_ROWS", 
+        "chartsEngine": "LINO", 
+        "explorationSampling": {
+            "autoRefreshSample": false, 
+            "selection": {
+                "maxRecords": 30000, 
+                "partitionSelectionMethod": "ALL", 
+                "targetRatio": 0.02, 
+                "samplingMethod": "HEAD_SEQUENTIAL"
+            }, 
+            "_refreshTrigger": 0
+        }, 
+        "explorationFilters": []
+    }, 
+    "backendType": "PY_MEMORY", 
+    "predictionDisplayCharts": [], 
+    "predictionType": "REGRESSION", 
+    "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK", 
+    "preprocessing": {
+        "deduplication": {
+            "enabled": false
+        }, 
+        "reduce": {
+            "enable": false, 
+            "disable": true, 
+            "kept_variance": 0.0
+        }, 
+        "numerical_combinations": {
+            "pairwiseLinear": false, 
+            "polynomialInteraction": false
+        }, 
+        "target_remapping": [], 
+        "feature_generation": {
+            "manual_interactions": {
+                "interactions": []
+            }, 
+            "pairwise_linear": {
+                "behavior": "DISABLED"
+            }, 
+            "polynomial_combinations": {
+                "behavior": "DISABLED"
+            }
+        }, 
+        "featureSelection": {
+            "kind": "NONE", 
+            "filterOnlyKBestNbToKeep": 10
+        }, 
+        "per_feature": {
+            "pages_visited": {
+                "generate_derivative": false, 
+                "rescaling": "AVGSTD", 
+                "name": "pages_visited", 
+                "role": "INPUT", 
+                "numerical_handling": "REGULAR", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "dssWantsToModify": false, 
+                    "userModified": false, 
+                    "recordedMeaning": "DoubleMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "missing_handling": "IMPUTE", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "missing_impute_with": "MEAN", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "revenue": {
+                "generate_derivative": false, 
+                "name": "revenue", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "dssWantsToModify": false, 
+                    "userModified": false, 
+                    "recordedMeaning": "LongMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "TARGET", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "gender": {
+                "missing_impute_with": "MODE", 
+                "name": "gender", 
+                "category_handling": "DUMMIFY", 
+                "cumulative_proportion": 0.95, 
+                "state": {
+                    "dssWantsToModify": false, 
+                    "userModified": false, 
+                    "recordedMeaning": "Gender", 
+                    "autoModifiedByDSS": false
+                }, 
+                "missing_handling": "IMPUTE", 
+                "max_nb_categories": 100, 
+                "dummy_clip": "MAX_NB_CATEGORIES", 
+                "role": "INPUT", 
+                "dummy_drop": "NONE", 
+                "min_samples": 10, 
+                "type": "CATEGORY", 
+                "max_cat_safety": 200
+            }, 
+            "age": {
+                "generate_derivative": false, 
+                "rescaling": "AVGSTD", 
+                "name": "age", 
+                "role": "INPUT", 
+                "numerical_handling": "REGULAR", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "dssWantsToModify": false, 
+                    "userModified": false, 
+                    "recordedMeaning": "LongMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "missing_handling": "IMPUTE", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "missing_impute_with": "MEAN", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "campain": {
+                "missing_impute_with": "MODE", 
+                "name": "campain", 
+                "category_handling": "DUMMIFY", 
+                "cumulative_proportion": 0.95, 
+                "state": {
+                    "dssWantsToModify": false, 
+                    "userModified": false, 
+                    "recordedMeaning": "Boolean", 
+                    "autoModifiedByDSS": false
+                }, 
+                "missing_handling": "IMPUTE", 
+                "max_nb_categories": 100, 
+                "dummy_clip": "MAX_NB_CATEGORIES", 
+                "role": "INPUT", 
+                "dummy_drop": "NONE", 
+                "min_samples": 10, 
+                "type": "CATEGORY", 
+                "max_cat_safety": 200
+            }, 
+            "ip_country": {
+                "missing_impute_with": "MODE", 
+                "name": "ip_country", 
+                "category_handling": "DUMMIFY", 
+                "cumulative_proportion": 0.95, 
+                "state": {
+                    "dssWantsToModify": false, 
+                    "userModified": false, 
+                    "recordedMeaning": "CountryMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "missing_handling": "IMPUTE", 
+                "max_nb_categories": 100, 
+                "dummy_clip": "MAX_NB_CATEGORIES", 
+                "role": "INPUT", 
+                "dummy_drop": "NONE", 
+                "min_samples": 10, 
+                "type": "CATEGORY", 
+                "max_cat_safety": 200
+            }, 
+            "customer_id": {
+                "missing_impute_with": "MODE", 
+                "name": "customer_id", 
+                "category_handling": "DUMMIFY", 
+                "cumulative_proportion": 0.95, 
+                "state": {
+                    "dssWantsToModify": false, 
+                    "userModified": true, 
+                    "recordedMeaning": "Text", 
+                    "autoModifiedByDSS": false
+                }, 
+                "missing_handling": "IMPUTE", 
+                "max_nb_categories": 100, 
+                "dummy_clip": "MAX_NB_CATEGORIES", 
+                "role": "REJECT", 
+                "dummy_drop": "NONE", 
+                "min_samples": 10, 
+                "type": "CATEGORY", 
+                "max_cat_safety": 200
+            }, 
+            "price_first_item_purchased": {
+                "generate_derivative": false, 
+                "rescaling": "AVGSTD", 
+                "name": "price_first_item_purchased", 
+                "role": "INPUT", 
+                "numerical_handling": "REGULAR", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "dssWantsToModify": false, 
+                    "userModified": false, 
+                    "recordedMeaning": "DoubleMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "missing_handling": "IMPUTE", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "missing_impute_with": "MEAN", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }
+        }
+    }, 
+    "splitParams": {
+        "kfold": false, 
+        "splitBeforePrepare": true, 
+        "instanceIdRefresher": 0, 
+        "ttPolicy": "SPLIT_SINGLE_DATASET", 
+        "ssdSplitMode": "RANDOM", 
+        "ssdSelection": {
+            "maxRecords": 100000, 
+            "partitionSelectionMethod": "ALL", 
+            "targetRatio": 0.02, 
+            "samplingMethod": "HEAD_SEQUENTIAL"
+        }, 
+        "ssdTrainingRatio": 0.8, 
+        "ssdSeed": 1337, 
+        "nFolds": 5, 
+        "subSamplingSeed": 1337
+    }, 
+    "modeling": {
+        "gbt_max_feature_prop": 0.1, 
+        "lasso_regression": {
+            "alpha": [
+                0.05
+            ], 
+            "alphaMode": "MANUAL", 
+            "enabled": false
+        }, 
+        "gbt_selection_mode": "auto", 
+        "ridge_regression": {
+            "alpha": [
+                0.1, 
+                1.0, 
+                3.0
+            ], 
+            "alphaMode": "AUTO", 
+            "enabled": false
+        }, 
+        "gridSearchParams": {
+            "splitRatio": 0.8, 
+            "shuffleIterations": 1, 
+            "mode": "KFOLD", 
+            "nJobs": -1, 
+            "nFolds": 3, 
+            "stratified": true
+        }, 
+        "gbt_min_samples_leaf": 3, 
+        "logistic_regression": {
+            "l2": false, 
+            "C": [
+                0.1
+            ], 
+            "n_jobs": 2, 
+            "enabled": false, 
+            "l1": true
+        }, 
+        "mllib_naive_bayes": {
+            "enabled": false, 
+            "lambda": [
+                1.0
+            ]
+        }, 
+        "glm_h2o": {
+            "alphas": [
+                0.5
+            ], 
+            "standardize": true, 
+            "family": "gaussian", 
+            "beta_epsilon": 0.0001, 
+            "max_iter": 10000, 
+            "enabled": false, 
+            "tweedie_variance_power": 0.0, 
+            "n_folds": 0, 
+            "lambdas": [
+                1e-05
+            ]
+        }, 
+        "custom_python": [
+            {
+                "enabled": false
+            }
+        ], 
+        "vertica_linear_regression": {
+            "epsilon": 1e-06, 
+            "maxIterations": 200, 
+            "enabled": false, 
+            "optimizer": "BFGS"
+        }, 
+        "gbt_classification": {
+            "exponential": false, 
+            "deviance": true, 
+            "learning_rate": [
+                0.1
+            ], 
+            "enabled": false, 
+            "min_samples_leaf": [
+                3
+            ], 
+            "n_estimators": [
+                100
+            ], 
+            "max_features": [
+                0
+            ], 
+            "max_depth": [
+                3
+            ]
+        }, 
+        "gbt_regression": {
+            "lad": false, 
+            "huber": false, 
+            "learning_rate": [
+                0.1
+            ], 
+            "enabled": false, 
+            "min_samples_leaf": [
+                3
+            ], 
+            "n_estimators": [
+                100
+            ], 
+            "ls": true, 
+            "max_features": [
+                0
+            ], 
+            "max_depth": [
+                3
+            ]
+        }, 
+        "nb_sparkling": {
+            "enabled": false, 
+            "laplace": 0.0, 
+            "min_std_dev": 0.001
+        }, 
+        "gbm_h2o": {
+            "learn_rate": 0.1, 
+            "ntrees": 50, 
+            "family": "AUTO", 
+            "nbins": 20, 
+            "enabled": false, 
+            "min_rows": 10, 
+            "grid_parallelism": -1, 
+            "max_depth": 5
+        }, 
+        "decision_tree_classification": {
+            "gini": true, 
+            "random": false, 
+            "enabled": false, 
+            "min_samples_leaf": [
+                1
+            ], 
+            "entropy": false, 
+            "max_depth": [
+                5
+            ], 
+            "best": true
+        }, 
+        "grid_search": true, 
+        "random_forest_regression": {
+            "n_jobs": 1, 
+            "max_tree_depth": [
+                22
+            ], 
+            "enabled": false, 
+            "min_samples_leaf": [
+                17
+            ], 
+            "mode": "auto", 
+            "max_features": [
+                0
+            ]
+        }, 
+        "deep_learning_sparkling": {
+            "momentum_start": 0.0, 
+            "rate_annealing": 1e-06, 
+            "hidden_dropout_ratios": [
+                0.1, 
+                0.2
+            ], 
+            "max_w2": -1.0, 
+            "epsilon": 1e-08, 
+            "activation": "RECTIFIER", 
+            "enabled": false, 
+            "epochs": 10.0, 
+            "momentum_ramp": 1000000.0, 
+            "rate": 0.005, 
+            "input_dropout_ratio": 0.0, 
+            "l2": 0.0, 
+            "rho": 0.99, 
+            "l1": 0.0, 
+            "hidden": [
+                10, 
+                10
+            ], 
+            "rate_decay": 1.0, 
+            "use_adaptative": true, 
+            "dropout": false, 
+            "momentum_stable": 0.0
+        }, 
+        "mllib_gbt": {
+            "cache_node_ids": false, 
+            "subset_strategy": "auto", 
+            "subsampling_rate": 1.0, 
+            "impurity": "gini", 
+            "max_bins": 32, 
+            "enabled": false, 
+            "step_size": [
+                0.1
+            ], 
+            "checkpoint_interval": 10, 
+            "min_instance_per_node": 1, 
+            "min_info_gain": 0.0, 
+            "max_memory_mb": 256, 
+            "num_trees": [
+                20
+            ], 
+            "seed": 1337, 
+            "max_depth": [
+                5
+            ]
+        }, 
+        "gbm_sparkling": {
+            "learn_rate": 0.1, 
+            "ntrees": 50, 
+            "family": "AUTO", 
+            "nbins": 20, 
+            "min_rows": 10, 
+            "tweedie_power": 1.5, 
+            "enabled": false, 
+            "nbins_cats": 1024, 
+            "balance_classes": false, 
+            "max_after_balance_size": 2.0, 
+            "max_depth": 5
+        }, 
+        "gbt_max_features": 0, 
+        "glm_sparkling": {
+            "family": "gaussian", 
+            "beta_epsilon": 0.0001, 
+            "max_iter": 100, 
+            "enabled": false, 
+            "tweedie_variance_power": 0.5, 
+            "alpha": 0.5, 
+            "lambda": 0.0
+        }, 
+        "mllib_dt": {
+            "cache_node_ids": false, 
+            "max_bins": 32, 
+            "enabled": false, 
+            "max_depth": [
+                5
+            ], 
+            "min_instance_per_node": 1, 
+            "min_info_gain": 0.0, 
+            "max_memory_mb": 256, 
+            "checkpoint_interval": 10
+        }, 
+        "metrics": {
+            "customEvaluationMetricNeedsProba": false, 
+            "evaluationMetric": "R2", 
+            "liftPoint": 0.4, 
+            "customEvaluationMetricGIB": true, 
+            "costMatrixWeights": {
+                "tpGain": 1.0, 
+                "fnGain": 0.0, 
+                "fpGain": -0.3, 
+                "tnGain": 0.0
+            }
+        }, 
+        "rf_sparkling": {
+            "nbins": 20, 
+            "mtries": -1, 
+            "ntrees": 50, 
+            "enabled": false, 
+            "min_rows": 1, 
+            "nbins_cats": 1024, 
+            "sample_rate": 0.6666, 
+            "max_depth": 5
+        }, 
+        "leastsquare_regression": {
+            "n_jobs": 2, 
+            "enabled": false
+        }, 
+        "mllib_linreg": {
+            "max_iter": 10, 
+            "enabled": false, 
+            "reg_param": [
+                0.1
+            ], 
+            "enet_param": [
+                1.0
+            ]
+        }, 
+        "mllib_logit": {
+            "max_iter": 10, 
+            "enabled": false, 
+            "reg_param": [
+                0.1
+            ], 
+            "enet_param": [
+                1.0
+            ]
+        }, 
+        "svc_classifier": {
+            "C": [
+                1.0
+            ], 
+            "linear": false, 
+            "sigmoid": false, 
+            "max_iter": -1, 
+            "enabled": false, 
+            "poly": false, 
+            "tol": 0.001, 
+            "rbf": true, 
+            "coef0": 0.0, 
+            "gamma": [
+                0.0
+            ]
+        }, 
+        "deep_learning_h2o": {
+            "rate_annealing": 0.0, 
+            "epsilon": 1e-06, 
+            "enabled": false, 
+            "epochs": 10.0, 
+            "rate": 1e-05, 
+            "input_dropout_ratio": 0.0, 
+            "l2": 0.0, 
+            "rho": 0.95, 
+            "l1": 0.0, 
+            "hidden": "100,100", 
+            "adaptative_rate": true
+        }, 
+        "xgboost": {
+            "colsample_bytree": [
+                0.8
+            ], 
+            "colsample_bylevel": [
+                1.0
+            ], 
+            "scale_pos_weight": 1.0, 
+            "max_delta_step": [
+                0.0
+            ], 
+            "learning_rate": [
+                0.2
+            ], 
+            "min_child_weight": [
+                0.0
+            ], 
+            "enabled": false, 
+            "nthread": -1, 
+            "base_score": 0.5, 
+            "max_depth": [
+                10
+            ], 
+            "n_estimators": 300, 
+            "subsample": [
+                1.0
+            ], 
+            "seed": 1337, 
+            "enable_early_stopping": true, 
+            "alpha": [
+                0.0
+            ], 
+            "lambda": [
+                1.0
+            ], 
+            "missing": 0.0, 
+            "impute_missing": false, 
+            "gamma": [
+                0.0
+            ], 
+            "early_stopping_rounds": 4
+        }, 
+        "distributed_rf_h2o": {
+            "nbins": 20, 
+            "build_tree_one_node": false, 
+            "ntrees": 50, 
+            "enabled": false, 
+            "min_rows": 1, 
+            "sample_rate": 0.6666, 
+            "max_depth": 5
+        }, 
+        "rf_selection_mode": "auto", 
+        "custom_mllib": [], 
+        "vertica_logistic_regression": {
+            "epsilon": 1e-06, 
+            "maxIterations": 200, 
+            "enabled": false, 
+            "optimizer": "BFGS"
+        }, 
+        "decision_tree_regression": {
+            "gini": true, 
+            "random": false, 
+            "enabled": true, 
+            "min_samples_leaf": [
+                1
+            ], 
+            "entropy": false, 
+            "max_depth": [
+                5
+            ], 
+            "best": true
+        }, 
+        "sgd_classifier": {
+            "n_iter": 50, 
+            "n_jobs": 1, 
+            "log": true, 
+            "l1_ratio": 0.15, 
+            "enabled": false, 
+            "modified_huber": false, 
+            "l2": false, 
+            "l1": true, 
+            "elasticnet": false, 
+            "alpha": [
+                0.1, 
+                0.01, 
+                0.001
+            ]
+        }, 
+        "mllib_rf": {
+            "cache_node_ids": false, 
+            "subset_strategy": "auto", 
+            "subsampling_rate": 1.0, 
+            "impurity": "gini", 
+            "max_bins": 32, 
+            "enabled": false, 
+            "step_size": [
+                0.1
+            ], 
+            "checkpoint_interval": 10, 
+            "min_instance_per_node": 1, 
+            "min_info_gain": 0.0, 
+            "max_memory_mb": 256, 
+            "num_trees": [
+                20
+            ], 
+            "seed": 1337, 
+            "max_depth": [
+                5
+            ]
+        }, 
+        "random_forest_classification": {
+            "n_jobs": 1, 
+            "max_tree_depth": [
+                8
+            ], 
+            "enabled": false, 
+            "min_samples_leaf": [
+                3
+            ], 
+            "mode": "auto", 
+            "max_features": [
+                0
+            ]
+        }
+    }, 
+    "taskType": "PREDICTION", 
+    "id": "r3Jhr1Jr", 
+    "sparkRepartitionNonHDFS": 1
+}
