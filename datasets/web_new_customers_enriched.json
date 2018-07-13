@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1531475404298
+    "lastModifiedOn": 1531475652750
   },
   "tags": [],
   "params": {
@@ -239,7 +239,7 @@
     "checks": [
       {
         "metricId": "records:COUNT_RECORDS",
-        "minimum": 4000.0,
+        "minimum": 3000.0,
         "maximum": 0.0,
         "softMinimum": 0.0,
         "softMaximum": 0.0,
