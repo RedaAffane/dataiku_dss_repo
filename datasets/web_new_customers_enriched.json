@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1531475389218
+    "lastModifiedOn": 1531475404298
   },
   "tags": [],
   "params": {
@@ -235,8 +235,25 @@
     }
   },
   "metricsChecks": {
-    "runOnBuild": false,
-    "checks": [],
+    "runOnBuild": true,
+    "checks": [
+      {
+        "metricId": "records:COUNT_RECORDS",
+        "minimum": 4000.0,
+        "maximum": 0.0,
+        "softMinimum": 0.0,
+        "softMaximum": 0.0,
+        "minimumEnabled": true,
+        "maximumEnabled": false,
+        "softMinimumEnabled": false,
+        "softMaximumEnabled": false,
+        "type": "numericRange",
+        "meta": {
+          "name": "Value in range"
+        },
+        "computeOnBuildMode": "PARTITION"
+      }
+    ],
     "displayedState": {
       "partition": "NP",
       "checks": []
