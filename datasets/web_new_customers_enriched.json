@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 5,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1531475385673
+    "lastModifiedOn": 1531475389218
   },
   "tags": [],
   "params": {
@@ -79,45 +79,45 @@
     }
   },
   "schema": {
+    "userModified": false,
     "columns": [
       {
-        "maxLength": -1,
         "name": "customer_id",
+        "type": "string",
         "timestampNoTzAsDate": false,
-        "type": "string"
+        "maxLength": -1
       },
       {
-        "maxLength": -1,
         "name": "ip",
+        "type": "string",
         "timestampNoTzAsDate": false,
-        "type": "string"
+        "maxLength": -1
       },
       {
-        "maxLength": -1,
         "name": "ip_country",
+        "type": "string",
         "timestampNoTzAsDate": false,
-        "type": "string"
+        "maxLength": -1
       },
       {
-        "maxLength": -1,
         "name": "ip_geopoint",
+        "type": "string",
         "timestampNoTzAsDate": false,
-        "type": "string"
+        "maxLength": -1
       },
       {
-        "maxLength": -1,
         "name": "pages_visited",
+        "type": "double",
         "timestampNoTzAsDate": false,
-        "type": "double"
+        "maxLength": -1
       },
       {
-        "maxLength": -1,
         "name": "campain",
+        "type": "boolean",
         "timestampNoTzAsDate": false,
-        "type": "boolean"
+        "maxLength": -1
       }
-    ],
-    "userModified": false
+    ]
   },
   "metrics": {
     "probes": [
@@ -229,7 +229,9 @@
     "displayedState": {
       "partition": "NP",
       "columns": [],
-      "metrics": []
+      "metrics": [
+        "records:COUNT_RECORDS"
+      ]
     }
   },
   "metricsChecks": {
