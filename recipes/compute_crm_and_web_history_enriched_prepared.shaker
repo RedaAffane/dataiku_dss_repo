@@ -42,7 +42,7 @@
           "age"
         ],
         "values": [
-          "77"
+          "55"
         ],
         "matchingMode": "FULL_STRING",
         "action": "REMOVE_ROW",
