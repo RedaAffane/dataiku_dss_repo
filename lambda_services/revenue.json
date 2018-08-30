@@ -1,9 +1,24 @@
 {
+  "name": "revenue",
   "endpoints": [
     {
       "modelRef": "Vs6j4B8H",
       "useJava": true,
-      "testQueries": [],
+      "testQueries": [
+        {
+          "name": "web_last_month_enriched #1",
+          "q": {
+            "features": {
+              "customer_id": "041b77595d",
+              "ip": "108.124.56.200",
+              "ip_country": "United States",
+              "pages_visited": 2,
+              "campain": false,
+              "revenue": 171
+            }
+          }
+        }
+      ],
       "enrichMapping": [],
       "healthCheckQueries": [],
       "id": "predict",
