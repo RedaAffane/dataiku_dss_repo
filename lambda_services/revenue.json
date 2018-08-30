@@ -1,0 +1,21 @@
+{
+  "endpoints": [
+    {
+      "modelRef": "Vs6j4B8H",
+      "useJava": true,
+      "testQueries": [],
+      "enrichMapping": [],
+      "healthCheckQueries": [],
+      "id": "predict",
+      "type": "STD_PREDICTION"
+    }
+  ],
+  "publicAccess": true,
+  "authRealm": {
+    "queryKeys": []
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}
